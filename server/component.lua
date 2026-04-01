@@ -19,6 +19,7 @@ function RetrieveComponents()
 	Loans = exports["mythic-base"]:FetchComponent("Loans")
 	Billing = exports["mythic-base"]:FetchComponent("Billing")
 	Utils = exports["mythic-base"]:FetchComponent("Utils")
+	Version = exports["mythic-base"]:FetchComponent("Version")
 	RegisterChatCommands()
 end
 
@@ -43,6 +44,7 @@ AddEventHandler("Core:Shared:Ready", function()
 		"Loans",
 		"Billing",
 		"Utils",
+		"Version",
 	}, function(error)
 		if #error > 0 then
 			return
@@ -56,6 +58,8 @@ AddEventHandler("Core:Shared:Ready", function()
 		CreateFurnitureCallbacks()
 
 		SetupPropertyCrafting()
+
+		Version:Check('Mythic-Framework/Mythic-VersionCheckers', GetCurrentResourceName())
 	end)
 end)
 

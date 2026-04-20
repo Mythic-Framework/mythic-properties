@@ -139,7 +139,7 @@ _propertyCraftingRecipies = {
 	}
 }
 
--- Really Shitty Way of doing this but oh well
+-- not the best implementation, but it works for now. will need a rewrite at a later date.
 
 _propertyCrafting = {
 	{ -- King Abuse's Bench
